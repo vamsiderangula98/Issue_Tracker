@@ -1,0 +1,22 @@
+{
+  "name": "issue_tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vamsiderangula98/Issue_Tracker.git"
+  },
+  "author": "Vamsi Krishna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vamsiderangula98/Issue_Tracker/issues"
+  },
+  "homepage": "https://github.com/vamsiderangula98/Issue_Tracker#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
