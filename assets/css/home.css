@@ -1,0 +1,50 @@
+
+body{
+background: linear-gradient(45deg,lightblue,lightpink);
+margin: 0;
+padding: 0;
+display:flex;
+flex-wrap: wrap;
+flex-direction:column;
+height:100vh;
+}
+.add-project {
+    position: relative;
+    left:50%;
+    color:transparent;
+    width:auto;
+    height:6vh;
+    color:darkred!important;
+    
+    
+}
+
+
+
+
+.project-list{
+height:70vh;
+width: 75%;
+border-radius: 1rem 1rem;
+border:1px solid grey;
+color:purple;
+position:relative;
+left:12%;
+}
+
+
+.header{
+    width:100vw;
+    height:7vh;
+    font-size: 2rem;
+    color:darkorange;
+    background-color: rgb(24, 24, 61);
+}
+.footer{
+    padding:7px;
+    text-align:end;
+    width:100vw;
+    height:6.5vh;
+    color:yellow;
+    background-color: rgb(24, 24, 61);
+}

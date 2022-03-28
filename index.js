@@ -5,7 +5,7 @@ const port =8000;
 
 app.use(express.urlencoded({ extended: true }));
 
-
+app.use(express.static("./assets"));
 //setiing view engine
 app.set("view engine", "ejs");
 app.set("views", "./views");

@@ -1,0 +1,64 @@
+
+body{
+    background: linear-gradient(45deg,lightblue,lightpink);
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    min-height:100vh;
+    }
+    .Project-desc{
+        position: relative;
+        left:34%;
+        
+    min-height:75vh;
+    width: 60%;
+    /* border-radius: 1rem 1rem; */
+    /* border:1px solid grey; */
+    /* background-color:whitesmoke; */
+    color:purple;
+    }
+  
+    .header{
+        width:100vw;
+        height:8vh;
+        font-size: 2rem;
+        color:darkorange;
+        background-color: rgb(24, 24, 61);
+    }
+    .search-container{
+        position: relative;
+        left:34%;
+        
+    }
+    .search-form{
+        width:300px;
+        height:35px;
+        border-radius: 1rem 1rem; 
+    }
+    .search-form button{
+        position: relative;
+        height:100%;
+        left:-4px;
+        width:15%;
+        border-top-right-radius: 1rem 1rem;
+        border-bottom-right-radius: 1rem 1rem;
+    }
+    .search-form input{
+        width:83%;
+        height:100%;
+        /* border-radius: 1rem 1rem; */
+        border-top-left-radius: 1rem 1rem;
+        border-bottom-left-radius: 1rem 1rem;
+    }
+    
+    .footer{
+        padding:7px;
+        margin-top:3vh;
+        text-align:end;
+        width:100vw;
+        height:6.5vh;
+        color:yellow;
+        background-color: rgb(24, 24, 61);
+    }

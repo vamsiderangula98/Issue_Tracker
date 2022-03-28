@@ -4,6 +4,7 @@ const homeController= require("../controllers/homeController");
 
 //route for home
 router.get("/", homeController.home);
+router.get("/form",homeController.form);
 
  //route for projects
  router.use("/project", require("./project"));
