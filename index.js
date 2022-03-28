@@ -2,8 +2,14 @@
 const express = require("express");
 const app = express();
 const port =8000;
-app.use("/", require("./routes"));
 
+app.use(express.urlencoded({ extended: true }));
+
+
+//setiing view engine
+app.set("view engine", "ejs");
+app.set("views", "./views");
+app.use("/", require("./routes"));
 //listening to the server
 app.listen(port, function (err) {
   if (err) {
