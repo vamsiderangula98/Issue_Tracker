@@ -7,16 +7,16 @@ const mongoose = require("mongoose");
 //     console.log("Connected to Atlas database ");
 //   })
 //   .catch((err) => {
-    // console.error(`Error connecting to the database. \n${err}`);
+// console.error(`Error connecting to the database. \n${err}`);
 //   });
-mongoose.connect('mongodb://localhost/Issue_Tracker');
+mongoose.connect("mongodb://localhost/Issue_Tracker");
 //check if connection is made or not
-const db=mongoose.connection;
+const db = mongoose.connection;
 //if error in connecting to db
-db.on('error',console.error.bind('Error connecting to MongoDB'));
+db.on("error", console.error.bind("Error connecting to MongoDB"));
 //if connected to db
-db.once('open',function(){
-    console.log('Connected to Database :: MongoDB');
+db.once("open", function () {
+  console.log("Connected to Database :: MongoDB");
 });
 
- module.exports=db;
+module.exports = db;

@@ -1,3 +1,11 @@
 <div class="header">
-Issue Tracker
-</div>
+    <div id="title">
+      <a class=" c-gy text-dec" href="/">Issue Tracker</a>
+      </div>
+      <div class="signout">
+        <% if(locals.user){ %>
+          <a class="text-dec" style="color:red;" href="/users/sign-out" type="GET">Sign out</a>
+      <%} %>
+      </div>
+      
+        </div>

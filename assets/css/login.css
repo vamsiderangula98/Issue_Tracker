@@ -2,7 +2,7 @@
 body{
     background:linear-gradient(40deg,lightblue,lightpink);
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
 }
 .w-55{
     width:37% !important;
@@ -19,10 +19,14 @@ body{
     border-radius: 1rem 1rem!important;
     border:2px solid grey!important ;
     background-color:rgb(240, 228, 206);
+    height:73vh;
   
 }
 .header{
     background-color: rgb(31, 31, 65)!important;
+    color:yellowgreen!important;
+    font-size: 2rem;
+    height:9vh;
 }
 
 .center-alligned{
@@ -34,11 +38,15 @@ body{
     text-decoration: none;
     font-weight: bold;
 }
+.text-dec{
+    text-decoration: none!important;
+    color:greenyellow!important;
+}
 .footer{
     background-color: rgb(21, 21, 56);
     color:wheat;
     margin-top:8vh;
-    height:6.5vh;
+    height:6vh;
     text-align: end;
     padding-top: 8px;
 

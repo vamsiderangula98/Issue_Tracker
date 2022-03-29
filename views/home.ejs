@@ -17,23 +17,33 @@
   </head>
   <body>
     
-<%- include('_header')%>  
-<div >
-  <a class="add-project btn btn-primary m-2" href="/form">Add Project</a>
-</div>
-    <div class="p-2 m-2 project-list">
-      <h2 class="m-2">List of Projects</h2>
-      <!-- TO DO the project list display -->
+        <%- include('_header')%>  
 
-     
-        <div class="m-2">
-           <a class= href="/project/:id">project1</a>
-        </div>
-      </div>
+        <div><a class="add-project btn btn-primary m-2" href="/project">Add Project</a></div>
+  
+         <div>
+          <div class="p-2 m-2 project-list">
+            <h2 class="m-2">List of Projects</h2>
+                <div class="d-flex p-1 m-1 flex-column justify-content-center ">
+                   <% for(let i of projects){ %>
+                       <div class="d-flex flex-wrap flex-row justify-content-around">
+                          <%=i.name%>
+                          <%=i.desc%>
+                          <%=i.author%>
+                          <a href="/project/destroy" class="btn btn-danger">Delete</a>
+                          <%}%>
+                       </div>
+                  </div>
+          </div>
+
+          </div>
+        
+  <!-- <%- include('_footer')%>      -->
+      
        
 
       
-<%- include('_footer')%>    
+ 
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

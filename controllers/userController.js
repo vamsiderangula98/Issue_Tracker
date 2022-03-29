@@ -1,6 +1,15 @@
 const User = require("../models/user");
-const Review=require('../models/review');
-
+// Const Project=require("../models/project");
+module.exports.home=async function(req,res){
+    try {
+      if(!req.user){
+          return res.redirect('users/login');
+           }       }
+    catch (error) {
+        console.log(error);
+        return res.redirect('/');
+    }
+  }
 //login controller
 module.exports.logIn=function(req,res){
     if(!req.isAuthenticated()){

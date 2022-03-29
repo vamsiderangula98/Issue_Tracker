@@ -4,17 +4,17 @@ const projectSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      required:true,
     },
-    description: {
+    desc: {
         type: String,
-        required: true,
+        required:true,
       },
     author: {
         type: String,
         required: true,
       },
-    issue: [
+    issues: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Issue',
@@ -26,5 +26,5 @@ const projectSchema = new mongoose.Schema(
   }
 );
 
-const Project= mongoose.model('Question', projectSchema);
+const Project= mongoose.model('Project', projectSchema);
 module.exports = Project;

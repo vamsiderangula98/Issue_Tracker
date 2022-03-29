@@ -21,18 +21,18 @@
    
 <div class=" m-2 p-2 newproject-form">
     <h2 class="m-3">New Project Form</h2>
-    <form action="/projects/create" method="POST">
+    <form action="/project/create" method="POST">
     <div class="m-2">
       <label for="projectName" class="form-label">Name</label>
-      <input type="text" class="form-control" id="projectName" placeholder="Enter Project Name" name="password">
+      <input type="text" class="form-control" id="projectName" placeholder="Enter Project Name" name="name" required>
     </div>
     <div class="m-2">
       <label for="projectDesc" class="form-label">Description</label>
-      <input type="text" class="form-control" id="projectDesc" placeholder="Enter Project Description" name="password">
+      <input type="text" class="form-control" id="projectDesc" placeholder="Enter Project Description" name="desc" required>
     </div>
     <div class="m-2">
       <label for="projectAuthor" class="form-label">Author</label>
-      <input type="text" class="form-control" id="projectAuthor" placeholder="Enter Author" name="password">
+      <input type="text" class="form-control" id="projectAuthor" placeholder="Enter Author" name="author" required>
     </div>
     <button type="submit" class="m-5 btn btn-success">Add New project</button>
   </form></div>

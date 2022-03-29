@@ -1,7 +1,9 @@
-module.exports.home=function(req,res){
-    console.log(req.body);
-    return res.render('home');
+
+const Project=require('../models/project');
+module.exports.home=async function(req,res){
+    let projects=await Project.find({});
+    return res.render('home',
+    {
+    projects
+    });
 };
-module.exports.form=function(req,res){
-    return res.render('projectform');
-}
