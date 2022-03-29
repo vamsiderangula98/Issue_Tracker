@@ -1,3 +1,3 @@
 module.exports.home=function(req,res){
-    return res.render('issue');
+    return res.render('issueform');
 };
