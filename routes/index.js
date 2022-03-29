@@ -11,5 +11,6 @@ router.get("/form",homeController.form);
 
 //route for issues
  router.use("/issue", require("./issue"));
+ router.use("/users",require('./users'));
 
 module.exports = router;
