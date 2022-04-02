@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 //   "mongodb+srv://kunals713:kunal%40713@cluster0.jadmk.mongodb.net/issue-tracker?retryWrites=true&w=majority"
 // );
 
-mongoose.connect("mongodb://localhost/issue_trackerDb");
+mongoose.connect("mongodb+srv://vamsid98:vamsi@cluster0.abl5u.mongodb.net/Issue_Tracker_db");
 
 // aquire the connection
 const db = mongoose.connection;

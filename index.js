@@ -35,7 +35,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl:"mongodb://localhost/issue_trackerDb" ,
+        mongoUrl:"mongodb+srv://vamsid98:vamsi@cluster0.abl5u.mongodb.net/Issue_Tracker_db" ,
         collectionName:'sessions',
         mongooseConnection: db,
         autoRemove: "disabled",
