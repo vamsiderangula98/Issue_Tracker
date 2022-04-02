@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color:brown;
+  
+}
+#create-new-issue {
+  border-radius: 2rem 2rem;
+  height: 560px;
+  width: 500px;
+  background-color: aliceblue;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 0px 5px 5px 5px rgb(112, 109, 112);
+  padding: 3px;
+}
+
+#create-new-issue form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#create-new-issue form div {
+  margin-top: 15px;
+}
+
+#create-new-issue input,
+textarea {
+  border-radius: 0.5rem 0.5rem;
+  width: 400px;
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px 10px;
+  outline: none;
+  background-color:wheat;
+}
+
+#create-new-issue textarea {
+  font-size: 15px;
+}
+
+#add-issue-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size:20px;
+  font-weight: bold;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  color: rgb(221, 248, 239);
+  background-color: rgb(10, 43, 10);
+}
+
+#label-list #tag-name {
+  height: 20px;
+  width: 60px;
+  background-color: rgb(78, 105, 23);
+  color: white;
+  font-weight: bold;
+  padding: 5px 8px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+#label-list .tag {
+  height: 20px;
+  background-color: rgb(86, 23, 105);
+  color: white;
+  font-weight: bold;
+  padding: 2px 4px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#label-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#label-container #add-label-btn {
+  margin-top: 10px;
+  padding: 2px 4px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: darkblue;
+  color:wheat;
+
+}

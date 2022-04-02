@@ -1,21 +1,27 @@
-//initial setup
 const express = require("express");
-const app = express();
 const port =8000;
-const cors = require("cors");
+const app = express();
+const path = require("path");
+const expressLayouts = require("express-ejs-layouts"); //for accesing all ejs files in single layout
 const db = require("./config/mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
 const MongoStore = require("connect-mongo");
+var bodyParser = require("body-parser");
 
-app.use(express.urlencoded({ extended: true }));
-app.use(cors());
 app.use(express.static("./assets"));
 
-//setiing view engine
+app.use(expressLayouts);
+app.use(express.urlencoded());
+app.set("layout extractStyles", true);
+app.set("layout extractScripts", true);
+//setting up view engine
 app.set("view engine", "ejs");
-app.set("views", "./views");
+app.set("views", path.join(__dirname, "views"));
+app.set("views", "views");
+
+
 
 //storing session in database
 app.use(
@@ -29,7 +35,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl:"mongodb://localhost/Issue_Tracker" ,
+        mongoUrl:"mongodb://localhost/issue_trackerDb" ,
         collectionName:'sessions',
         mongooseConnection: db,
         autoRemove: "disabled",
@@ -46,8 +52,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
+//routes
+app.use("/", require("./routes")); 
 
-app.use("/", require("./routes"));
+
+// parse application/json
+app.use(bodyParser.json());
+app.use(express.json());
+
 
 //listening to the server
 app.listen(port, function (err) {

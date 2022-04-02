@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/create_project.css" />
+
+<section id="create-new-project">
+  <h1 style="text-align: center; margin-top: 10px">Add New Project</h1>
+
+  <!-- form for submittng project -->
+  <form action="/projects/create_project" method="POST">
+    <div id="new-project-name">
+      <h3>Name</h3>
+      <input type="text" name="projectName" id="create-project-name" />
+    </div>
+
+    <div id="new-project-description">
+      <h3>Description</h3>
+      <textarea rows="2" name="projectDescription"></textarea>
+    </div>
+
+    <div id="new-project-author">
+      <h3>Author</h3>
+      <input type="text" name="projectAuthor" id="create-project-author" />
+    </div>
+    <button id="add-project-btn">Create Project</button>
+  </form>
+</section>

@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/create_issue.css" />
+
+<section id="create-new-issue">
+  <h1 style="text-align: center; margin-top: 10px">Add New Issue</h1>
+
+  <!-- form for submittng issue -->
+  <form action="/projects/create_issue" method="POST">
+    <div id="new-issue-name">
+      <h3>Issue</h3>
+      <input type="text" name="issueName" id="create-issue-name" />
+    </div>
+
+    <div id="new-issue-description">
+      <h3>Description</h3>
+      <textarea rows="2" name="issueDescription"></textarea>
+    </div>
+
+    <div id="label-container">
+      <div id="label-list">
+        <div style="width:60px;" id="tag-name">Labels:</div>
+      </div>
+      <h3>Label</h3>
+      <input type="hidden" name="label" id="lables" value="" />
+      <input
+        type="text"
+        id="add-label"
+        list="label-list-db"
+        autocomplete="off"
+        multiple
+      />
+      <datalist id="label-list-db">
+        <%for(issue of project.issues){%> <% for(label of issue.label){%>
+        <option id="lab" value="<%=label%>"><%}%> <%}%></option>
+      </datalist>
+
+      <br />
+
+      <button id="add-label-btn">Add label</button>
+    </div>
+
+    <div id="new-issue-author">
+      <h3>Author</h3>
+      <input type="text" name="issueAuthor" id="create-project-author" />
+    </div>
+    <input type="hidden" name="projectID" value="<%=project.id%>" />
+    <button id="add-issue-btn">Create Issue</button>
+  </form>
+ 
+</section>
+
+<script src="/js/create_issue.js"></script>

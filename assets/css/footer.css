@@ -1,0 +1,18 @@
+footer {
+  height: 42px;
+  width: 100%;
+  background-color:rgb(32, 32, 66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: yellow;
+  margin-top: 31px;
+ 
+}
+#footer{
+  text-align: end;
+  margin-left:75%;
+
+}

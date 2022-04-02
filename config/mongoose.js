@@ -1,22 +1,25 @@
+// require library
 const mongoose = require("mongoose");
-// const uri = "mongodb+srv://vamsid98:vamsi@cluster0.6tlkj.mongodb.net/Employee_review_system";
 
-// mongoose
-//   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-//   .then(() => {
-//     console.log("Connected to Atlas database ");
-//   })
-//   .catch((err) => {
-// console.error(`Error connecting to the database. \n${err}`);
-//   });
-mongoose.connect("mongodb://localhost/Issue_Tracker");
-//check if connection is made or not
+//connecting to database
+
+// mongoose.connect(
+//   "mongodb+srv://kunals713:kunal%40713@cluster0.jadmk.mongodb.net/issue-tracker?retryWrites=true&w=majority"
+// );
+
+mongoose.connect("mongodb://localhost/issue_trackerDb");
+
+// aquire the connection
 const db = mongoose.connection;
-//if error in connecting to db
-db.on("error", console.error.bind("Error connecting to MongoDB"));
-//if connected to db
+
+// if error occurs
+db.on("error", console.error.bind(console, "Error in connecting to DataBase"));
+
+// if running then print message
+
 db.once("open", function () {
-  console.log("Connected to Database :: MongoDB");
+  console.log("Connected to database successfully");
 });
 
+// export the database
 module.exports = db;

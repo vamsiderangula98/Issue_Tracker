@@ -1,11 +1,20 @@
-<div class="header">
-    <div id="title">
-      <a class=" c-gy text-dec" href="/">Issue Tracker</a>
+<link rel="stylesheet" href="/css/header.css" />
+<section>
+  <header id="main-header">
+    <div id="home-logo">
+      <a id="logo" href="/"><i class="fas fa-home"></i></a>
+    </div>
+    <div id="project-title">Issue Tracker</div>
+    
+   <% if(locals.user){%>
+
+      <div id="user-name"><%=user.name%></div>
+      <div id="sign-out-btn">
+      <a style="color:red;font-size:1.3rem;" href="/users/sign-out">Sign Out</a>
       </div>
-      <div class="signout">
-        <% if(locals.user){ %>
-          <a class="text-dec" style="color:red;" href="/users/sign-out" type="GET">Sign out</a>
-      <%} %>
-      </div>
-      
-        </div>
+      <%}%>
+    
+    
+   
+  </header>
+</section>

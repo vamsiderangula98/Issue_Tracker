@@ -1,16 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const passport=require('../config/passport-local-strategy');
-const homeController= require("../controllers/homeController");
+const homeController = require("../controllers/home_controller");
+const passport=require("../config/passport-local-strategy");
 
-//route for home
 router.get("/",passport.checkAuthentication,homeController.home);
 
- //route for projects
- router.use("/project", require("./project"));
+router.use("/projects", require("./projects"));
+router.use("/issues",require("./issues"))
+router.use("/users",require("./users"));
 
-//route for issues
- router.use("/issue", require("./issue"));
- router.use("/users",require('./users'));
+router.use("/api", require("./api"));
 
 module.exports = router;

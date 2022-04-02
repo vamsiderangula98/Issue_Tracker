@@ -1,63 +1,120 @@
-
-body{
-background: linear-gradient(45deg,lightblue,lightpink);
-margin: 0;
-padding: 0;
-min-height:100vh;
-width:95vw;
-background-repeat: no-repeat;
-}
-.add-project {
-    position: relative;
-    left:50%;
-    color:transparent;
-    width:auto;
-    height:6vh;
-    color:darkred!important;
-}
-.project-list{
-background-color: aqua;
-min-height:70vh;
-width: 82%;
-border-radius: 1rem 1rem;
-border:1px solid grey;
-color:purple;
-position:relative;
-left:12%;
-/* align-self:center; */
-}
-.c-gy{
-    color: greenyellow!important;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.text-dec{
-    text-decoration: none!important;
-}
-.header{
-    width:99vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height:7vh;
-    background-color: rgb(24, 24, 61);
+#project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  min-height:69vh;
+  margin-left:170px;
+  margin-top: 22px;
 }
 
-.header #title{
-    font-size: 2rem;
-   
-    width:50%;
+#home-page-header {
+  height: 47px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
 }
-.header .signout{
-    font-size: 1.5rem;
-    padding-left: 40%;
-    width: 50%;
+
+#home-header h3 {
+  font-weight: bolder;
+  font-size: 25px;
+  color: white;
 }
-.footer{
-    margin-top: 10px;
-    padding:7px;
-    text-align:end;
-    width:100%;
-    height:6.5vh;
-    color:yellow;
-    background-color: rgb(24, 24, 61);
+
+#home-page-header #add-project-btn {
+  padding: 5px 8px;
+  font-weight: bold;
+  border-radius: 0px;
+  background-color:green;
+  font-size: 1.5rem;
+  color:cornsilk;
+}
+
+#projects-count {
+  background-color:blue;
+  width:100px;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+#project-container {
+  margin: 20px;
+  border: 8px solid rgb(245, 238, 245);
+  height: 160px;
+  width: 90%;
+  padding: 6px 11px;
+  box-shadow: 0px 4px 7px 0px #3b342a;
+  background-color: rgb(255, 255, 240);
+}
+
+#project-name {
+  font-size:1.5rem;
+  padding: 0;
+  margin: 5px;
+  font-weight: bold;
+  display: flex;
+  color:blue;
+  justify-content: space-between;
+}
+
+#delete-project-button {
+  font-weight: bold;
+  border-radius:0.5rem 0.5rem;
+  background-color:red!important;
+  color:aliceblue;
+  width:25px;
+  height:25px;
+  text-align: center;
+}
+
+#author-name {
+  color:darkred;
+  margin:0;
+  margin-left: 10px;
+  font-weight:700;
+
+}
+#author-name span{
+  /* margin:4px; */
+  font-size: 1rem;
+  font-weight:300;
+  color: darkorange;
+}
+
+#description {
+  padding: 5px;
+  
+}
+
+#description h5 {
+  margin: 3px;
+  font-size: 15px;
+  font-weight:700;
+  color: darkred;
+}
+
+#description-content {
+  color:darkgreen;
+  font-size: 15px;
+  margin: 0px;
+  padding: 1px 2px;
+}
+
+a {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
 }

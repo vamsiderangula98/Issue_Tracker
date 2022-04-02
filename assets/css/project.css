@@ -1,64 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
-body{
-    background: linear-gradient(45deg,lightblue,lightpink);
-    margin: 0;
-    padding: 0;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction:column;
-    min-height:100vh;
-    }
-    .Project-desc{
-        position: relative;
-        left:34%;
-        
-    min-height:75vh;
-    width: 60%;
-    /* border-radius: 1rem 1rem; */
-    /* border:1px solid grey; */
-    /* background-color:whitesmoke; */
-    color:purple;
-    }
+#project-header {
+  display: flex;
+  height:60px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px 20px;
+  margin: 10px;
   
-    .header{
-        width:100vw;
-        height:8vh;
-        font-size: 2rem;
-        color:darkorange;
-        background-color: rgb(24, 24, 61);
-    }
-    .search-container{
-        position: relative;
-        left:34%;
-        
-    }
-    .search-form{
-        width:300px;
-        height:35px;
-        border-radius: 1rem 1rem; 
-    }
-    .search-form button{
-        position: relative;
-        height:100%;
-        left:-4px;
-        width:15%;
-        border-top-right-radius: 1rem 1rem;
-        border-bottom-right-radius: 1rem 1rem;
-    }
-    .search-form input{
-        width:83%;
-        height:100%;
-        /* border-radius: 1rem 1rem; */
-        border-top-left-radius: 1rem 1rem;
-        border-bottom-left-radius: 1rem 1rem;
-    }
-    
-    .footer{
-        padding:7px;
-        margin-top:3vh;
-        text-align:end;
-        width:100vw;
-        height:6.5vh;
-        color:yellow;
-        background-color: rgb(24, 24, 61);
-    }
+}
+
+#add-issue-btn {
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius:0.5rem 0.5rem;
+  letter-spacing: 1px;
+  background-color: green;
+  color:aliceblue;
+}
+
+#sorting-section {
+  width: 60%;
+  height: 350px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content:center;
+  margin: auto;
+  border-radius: 20px;
+}
+/* styling serach by title input */
+
+#search-by-title-description {
+width:100%;
+  margin: 0;
+  margin-left:195px;
+}
+#search-by-title-description input {
+  margin-top: 10px;
+  border-radius: 1rem 1rem;
+  margin-right: 0%;
+  width: 330px;
+  height:35px;
+  display: block;
+  font-size: 20px;
+  background-color: white;
+  padding: 2px 8px;
+  outline: none;
+
+}
+
+#search-by-title-description button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius:1rem 1rem ;
+  letter-spacing: 1px;
+  background-color: brown!important;
+}
+#search-button{
+  cursor:pointer;
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius:1rem 1rem ;
+  letter-spacing: 1px;
+  background-color:purple!important;
+  color:aqua;
+}
+
+
+
+/* style fot dropdown filters */
+
+.dropbtn {
+  background-color:wheat;
+  color: brown;
+  padding: 14px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  width: 190px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.dropbtn:hover{
+  background-color: lightgreen!important;
+  color:darkmagenta!important;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:lightskyblue;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 120px;
+  overflow: auto;
+}
+
+.dropdown-content .element {
+  width: 170px;
+  color:darkolivegreen;
+  padding: 2px 5px;
+  font-size: 25px;
+  margin: 5px;
+}
+
+.dropdown-content .element:hover {
+  background-color: yellowgreen;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #39676d;
+}
+
+#filter-btn {
+  margin: 0;
+}
+
+#filter-btn button {
+  margin-top: 100px;
+  padding: 5px 10px;
+  font-size: 19px;
+  font-weight: bold;
+  border-radius: 1rem 1rem;
+
+  letter-spacing: 1px;
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+/* all issue section */
+
+#all-issues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin-left: 230px;
+  margin-top: 40px;
+}
+
+.issue-container {
+  background-color: aqua;
+  margin: 20px;
+  border: 8px solid rgb(245, 238, 245);
+  height: 160px;
+  width: 90%;
+  padding: 5px 10px;
+  box-shadow: 0px 4px 7px 0px #3b542a;
+  background-color: rgb(255, 255, 255);
+}
+#delete-issue-button {
+  font-weight: bold;
+  border-radius:0.5rem 0.5rem;
+  background-color:red;
+  color:aliceblue;
+height:23px!important;
+width:25px!important;
+font-size: 20px;
+padding:1px;
+text-decoration: none!important;
+  margin-left: 95%;
+}
+#projname{
+  height:60px;
+  width:200px;
+  font-size:2.2rem;
+  color:brown;
+  position: relative;
+  left:44%;
+  font-weight: bold;
+  
+
+}
+#issue-name {
+  font-size: 23px;
+  padding: 0;
+  margin: 5px;
+  font-weight: bold;
+  color: blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+#author-name span{
+  margin-top:5px;
+  color: darkorange;
+}
+#author-name{
+  margin-top:5px;
+  font-size: 16px;
+  color:darkred;
+  font-weight: bold;
+  margin: 5px;
+}
+#description {
+  padding:0;
+  margin: 5px;
+}
+
+#description h5 {
+  margin-top:5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: darkred;
+}
+
+
+#description-content {
+  color:darkgreen;
+  font-size: 15px;
+  margin: 0px;
+  padding: 1px 2px;
+}
+
+#tags-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+#tags-container #tag-name {
+  height: 20px;
+  width: 50px;
+  background-color: rgb(78, 105, 23);
+  color: white;
+  font-weight: bold;
+  padding: 2px 4px;
+  margin: 5px;
+}
+
+#tags-container .tag {
+  height: 20px;
+  background-color: rgb(86, 23, 105);
+  color: white;
+  font-weight: bold;
+  padding: 2px 4px;
+  margin: 5px;
+  text-align: center;
+}
+
+#issue-no {
+  display: flex;
+  align-items: center;
+}
+
+#total-issues {
+  background-color: red;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 3px;
+  margin-left: -300px;
+  margin-right: 200px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
