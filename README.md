@@ -1,8 +1,5 @@
 # Issue_Tracker
 
-
-# Employee-Review-System
-
  ### Description: ######
 An application that allows users to monitor and track project related issues
 
